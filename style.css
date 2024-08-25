@@ -1,3 +1,4 @@
+/* BASE STYLING */
 * {
   margin: 0;
   padding: 0;
@@ -24,4 +25,42 @@ section {
 
 aside {
   background-color: brown;
+}
+
+nav, menu, main, aside, section {
+  padding-top: 1.5rem;
+}
+
+/* LAYOUT STYLING */
+body {
+  display: grid;
+  grid-template-columns: 80px 400px 1fr 250px;
+  height: 100vh;
+  text-align: center;
+  font-weight: bold;
+  grid-template-areas:
+    "nav menu menu menu"
+    "nav section main aside"
+  ;
+  grid-template-rows: 80px 1fr;
+}
+
+nav {
+  grid-area: nav;
+}
+
+menu {
+  grid-area: menu;
+}
+
+section {
+  grid-area: section;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: aside;
 }
