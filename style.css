@@ -19,6 +19,16 @@ menu {
   color: white;
 }
 
+button {
+  font-size: 1rem;
+  background-color: indigo;
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 8px 12px;
+  font-weight: bold;
+}
+
 section {
   background-color: brown;
 }
@@ -27,7 +37,10 @@ aside {
   background-color: brown;
 }
 
-nav, menu, main, aside, section {
+nav,
+main,
+aside,
+section {
   padding-top: 1.5rem;
 }
 
@@ -40,8 +53,7 @@ body {
   font-weight: bold;
   grid-template-areas:
     "nav menu menu menu"
-    "nav section main aside"
-  ;
+    "nav section main aside";
   grid-template-rows: 80px 1fr;
 }
 
@@ -51,6 +63,15 @@ nav {
 
 menu {
   grid-area: menu;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 40px;
+}
+
+button:last-child {
+  background-color: red;
+  margin-left: auto;
 }
 
 section {
